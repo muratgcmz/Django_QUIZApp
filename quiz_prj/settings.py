@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'nested_admin',
     'quiz',
+    'users',
     
 ]
 
@@ -103,6 +104,11 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 1
+}
 
 
 # Internationalization
